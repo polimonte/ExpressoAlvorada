@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresso Alvorada</title>
+    <link rel="stylesheet" href="../styles/Home.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./Home.html">
+                    <img src="../images/complementos/logo.png" alt="Logo" />
+                </a>
+            </div>
+    
+            <ul class="menu">
+                <li><a href="./pages/Home.html">HOME</a></li>
+                <li><a href="./pages/Padarias.html">PADARIA</a></li>
+                <li><a href="./pages/Combos.html">COMBOS</a></li>
+                <li><a href="./pages/Pedidos.html">PEDIDOS</a></li>
+            </ul>
+    
+            <div class="auth-section">
+                <input type="text" placeholder="Search..." class="search-input" />
+                <button class="auth-button" id="btnLogin">SIGN UP / SIGN IN</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Popup oculto -->
+    <div id="popup" class="popup">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" required placeholder="E-mail">
+            <input type="password" required placeholder="Senha">
+            <button type="submit">Entrar</button>
+        </form>
+
+        <h2>Cadastro</h2>
+        <form id="cadastroForm">
+            <input type="text" required placeholder="Nome">
+            <input type="email" required placeholder="E-mail">
+            <input type="password" required placeholder="Senha">
+            <input type="password" required placeholder="Confirmar Senha">
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
+    
+    <main>
+        <div class="destaque">
+            <div class="texto-destaque">
+                <h1>Transforme seus dias com o Expresso Alvorada! </h1>
+                <p>Cada manhã é uma nova oportunidade de
+                    saborear algo especial.</p>
+            </div>
+            <img src="../images/Home/café-da-manhã.png" alt="">
+        </Div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

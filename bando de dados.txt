@@ -1,0 +1,85 @@
+-- Criando tabela Usuario
+CREATE TABLE Usuario (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nomeCompleto VARCHAR(255) NOT NULL,
+    cpf VARCHAR(14) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(50) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    estado CHAR(2) NOT NULL,
+    cep VARCHAR(8) NOT NULL
+);
+
+-- Criando tabela Padaria
+CREATE TABLE Padaria (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    cnpf VARCHAR(18) UNIQUE NOT NULL,
+    rua VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(50) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    estado CHAR(2) NOT NULL,
+    cep VARCHAR(8) NOT NULL
+);
+
+-- Criando tabela Produto
+CREATE TABLE Produto (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    preco DECIMAL(10,2) NOT NULL,
+    categoria VARCHAR(50)
+);
+
+-- Criando tabela Pedido
+CREATE TABLE Pedido (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    cliente_id BIGINT NOT NULL,
+    padaria_id BIGINT NOT NULL,
+    dataCriacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    dataPrevistaEntrega DATE,
+    status VARCHAR(20),
+    FOREIGN KEY (cliente_id) REFERENCES Usuario(id),
+    FOREIGN KEY (padaria_id) REFERENCES Padaria(id)
+);
+
+-- Criando tabela Compra
+CREATE TABLE Compra (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    cliente_id BIGINT NOT NULL,
+    dataCompra DATE NOT NULL,
+    valorTotal DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (cliente_id) REFERENCES Usuario(id)
+);
+
+-- Criando tabela ProdutoCompra
+CREATE TABLE ProdutoCompra (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    compra_id BIGINT NOT NULL,
+    produto_id BIGINT NOT NULL,
+    quantidade INTEGER NOT NULL,
+    FOREIGN KEY (compra_id) REFERENCES Compra(id),
+    FOREIGN KEY (produto_id) REFERENCES Produto(id)
+);
+
+-- Criando tabela ProdutoPedido
+CREATE TABLE ProdutoPedido (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    pedido_id BIGINT NOT NULL,
+    produto_id BIGINT NOT NULL,
+    quantidade INTEGER NOT NULL,
+    FOREIGN KEY (pedido_id) REFERENCES Pedido(id),
+    FOREIGN KEY (produto_id) REFERENCES Produto(id)
+);
+
+-- Criando tabela PadariaProduto
+CREATE TABLE PadariaProduto (
+    padaria_id BIGINT NOT NULL,
+    produto_id BIGINT NOT NULL,
+    estoque INTEGER NOT NULL DEFAULT 0,
+    PRIMARY KEY (padaria_id, produto_id),
+    FOREIGN KEY (padaria_id) REFERENCES Padaria(id),
+    FOREIGN KEY (produto_id) REFERENCES Produto(id)
+);

@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    background-color: #F8F0E6;
+}
+
+.header {
+    background-color: #F8F0E6;
+    display: flex;
+}
+
+.links-paginas {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header a {
+    text-decoration: none;
+    color: #453123;
+}
+
+
+/* Barra de navegação */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9f3eb;
+    /* Fundo bege */
+    border-bottom: 1px solid #e0d6c5;
+    /* Linha discreta na parte inferior */
+}
+
+.logo img {
+    height: 50px;
+    /* Altura ajustada para o logo */
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #3b2c25;
+    /* Cor marrom */
+    text-transform: uppercase;
+    position: relative;
+}
+
+/* Destaque no menu */
+.menu .highlight a {
+    color: #ffffff;
+    /* Texto branco */
+    background-color: #3b2c25;
+    /* Fundo marrom */
+    border-radius: 50%;
+    /* Formato circular */
+    padding: 5px 15px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ícones */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons .icon {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.icons .user-icon {
+    background-image: url('../images/complementos/icone-perfil.png');
+}
+
+.icons .cart-icon {
+    background-image: url('../images/complementos/carrinho.png');
+}
+
+.auth-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-input {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 200px;
+    font-size: 14px;
+}
+
+.auth-button {
+    padding: 8px 20px;
+    background-color: #FFD700;
+    color: #6F4E37;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #6F4E37;
+    color: #FFF8EC;
+}
