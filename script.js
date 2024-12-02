@@ -1,42 +1,32 @@
-document.getElementById('btnLogin').addEventListener('click', abrirPopup);
-document.getElementById('btnCadastar').addEventListener('click', abrirPopup);
+document.getElementById('switchToRegister').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('registerForm').style.display = 'block';
+});
 
-function abrirPopup() {
-    document.getElementById('popup').style.display = 'block';
-}
+document.getElementById('switchToLogin').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('registerForm').style.display = 'none';
+    document.getElementById('loginForm').style.display = 'block';
+});
 
-function fecharPopup() {
-    document.getElementById('popup').style.display = 'none';
-}
+document.addEventListener('DOMContentLoaded', function () {
+    const loginButton = document.getElementById('loginButton');
 
-// Funções para processar login e cadastro
-function processarLogin(dados) {
-    // Implemente a lógica de login aqui
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = this.querySelector('input[type="email"]').value;
-        const senha = this.querySelector('input[type="password"]').value;
-    
-        processarLogin({ email, senha });
-    });
-    console.log('Processando login:', dados);
-}
+    if (loginButton) {
+        loginButton.addEventListener('click', function () {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
 
-function processarCadastro(dados) {
-    // Implemente a lógica de cadastro aqui
-    document.getElementById('cadastroForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const nome = this.querySelector('input[name="nome"]').value;
-        const email = this.querySelector('input[name="email"]').value;
-        const senha1 = this.querySelector('input[name="senha"]').value;
-        const senha2 = this.querySelector('input[name="confirmar-senha"]').value;
-    
-        if (senha1 !== senha2) {
-            alert('As senhas não coincidem!');
-            return;
-        }
-    
-        processarCadastar({ nome, email, senha: senha1 });
-    });
-    console.log('Processando cadastro:', dados);
-}
+            if (email && password) {
+                // Simulando validação bem-sucedida
+                alert('Login bem-sucedido! Redirecionando para a página Home...');
+                window.location.href = './pages/Home.html'; // Redireciona para a página Home
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        });
+    } else {
+        console.error('Botão de login não encontrado.');
+    }
+});

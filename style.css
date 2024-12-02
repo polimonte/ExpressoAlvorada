@@ -1,0 +1,52 @@
+.navbar::before {
+  top: 58%;
+
+}
+.divider {
+  width: 1px;
+  background-color: #F28C28;
+  margin: 0 20px;
+  height: auto;
+  align-self: stretch;
+}
+
+
+.login-section, .register-section {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-section, .register-section h3 {
+  color: #F28C28;
+  justify-content: center;
+}
+
+.login-section input, .register-section input, .register-section select {
+  border-radius: 60px;
+  border: solid 1px #F28C28;
+  width: 29vw;
+  margin: 10px;
+}
+
+.login-section button, .register-section button {
+  background-color: #F28C28;
+  color: black;
+  border-radius: 60px;
+  border: none;
+  width: 29vw;
+  margin: 10px;
+}
+
+.login-section button:hover, .register-section button:hover{
+  background-color: #F28C28;
+  color: white;
+}
+
+.btn-close {
+  filter: invert(36%) sepia(78%) saturate(563%) hue-rotate(17deg) brightness(95%) contrast(85%);
+}
+.btn-close:hover {
+  filter: invert(55%) sepia(90%) saturate(700%) hue-rotate(10deg) brightness(90%) contrast(95%);
+}
