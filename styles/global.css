@@ -5,11 +5,14 @@
 body {
     margin: 0;
     background-color: #F8F0E6;
+    
 }
 
 .header {
     background-color: #FFF8EC;
     display: flex;
+    font-family: 'Playfair Display SC';
+    font-weight: bold;
 }
 
 

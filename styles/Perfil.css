@@ -1,7 +1,7 @@
 .profile-container {
-    max-width: 600px;
+    max-width: 80vw;
     margin: 50px auto;
-    background: #fff;
+    background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -10,6 +10,7 @@
 .profile-header {
     text-align: center;
     margin-bottom: 20px;
+    border-bottom: 1px solid black;
 }
 
 .profile-header img {
@@ -19,19 +20,37 @@
     border: 2px solid #ddd;
 }
 
-.profile-header h2 {
+.profile-header h1 {
     margin: 10px 0;
     font-size: 24px;
 }
 
-.profile-details {
-    margin: 20px 0;
+.sections{
+    display: flex;
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(2, auto);
+    justify-content: space-evenly;
 }
 
-.profile-details p {
-    margin: 10px 0;
+section {
+    margin: 20px 0;
+    padding-top: 10px;
+}
+
+section h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+section p {
+    margin: 8px 0;
     font-size: 16px;
     color: #555;
+}
+
+footer {
+    margin-top: 20px;
 }
 
 .edit-button {
@@ -39,7 +58,7 @@
     width: 100%;
     padding: 10px;
     background-color: #007bff;
-    color: #fff;
+    color: white;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
