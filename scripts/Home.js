@@ -1,59 +1,77 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const carousels = document.querySelectorAll('.carousel-container');
+/* ---------------------------------------- */
+/* Carrossel                                */
+/* ---------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const carrossel = document.querySelector('.carrossel');
+  const items = document.querySelectorAll('.carrossel-item');
+  const prevButton = document.querySelector('.carrossel-button.prev');
+  const nextButton = document.querySelector('.carrossel-button.next');
+  const itemWidth = items[0]?.offsetWidth + 20 || 0; // largura do item + margem (ajuste se necessário)
+  let currentIndex = 0;
 
-  carousels.forEach((carouselContainer) => {
-    const carousel = carouselContainer.querySelector('.carousel');
-    const items = carousel.querySelectorAll('.carousel-item');
-    const nextButton = carouselContainer.querySelector('.next');
-    const prevButton = carouselContainer.querySelector('.prev');
+  // Função para mover o carrossel
+  function moveCarrossel(index) {
+    carrossel.style.transform = `translateX(${-index * itemWidth}px)`;
+  }
 
-    const itemsToShow = 3;
-    const totalItems = items.length;
-    const step = 100 / itemsToShow;
-    let currentIndex = 0;
-
-    const updateCarousel = () => {
-      carousel.style.transform = `translateX(${-currentIndex * step}%)`;
-    };
-
-    nextButton.addEventListener('click', () => {
-      if (currentIndex < totalItems - itemsToShow) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
-
-    prevButton.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
-
-    window.addEventListener('resize', updateCarousel);
+  // Eventos dos botões
+  prevButton?.addEventListener('click', () => {
+    currentIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+    moveCarrossel(currentIndex);
   });
 
-  // Código para o popup
-  const exibir = document.querySelector('.exemplo-comida');
-  const popupComida = document.querySelector('.popup-comida');
-  const popupOverlayComida = document.querySelector('.popup-overlay-comida');
+  nextButton?.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    moveCarrossel(currentIndex);
+  });
+});
 
-  if (exibir && popupComida && popupOverlayComida) {
-    exibir.addEventListener('click', (event) => {
-      event.preventDefault();
-      console.log('Item de comida clicado!');
+/* ---------------------------------------- */
+/* Popup de Detalhes de Comida              */
+/* ---------------------------------------- */
+const popup = document.querySelector('.popup-comida');
+const overlay = document.querySelector('.popup-overlay-comida');
+const closePopupButton = popup?.querySelector('button.close-popup');
 
-      popupComida.style.display = 'block';
-      popupOverlayComida.style.display = 'block';
+// Função para abrir o popup
+function openPopup(content) {
+  popup.querySelector('h2').textContent = content.title || 'Detalhes da Comida';
+  popup.querySelector('p').textContent = content.description || 'Informações adicionais aqui.';
+  popup.style.display = 'block';
+  overlay.style.display = 'block';
+}
+
+// Função para fechar o popup
+function closePopup() {
+  popup.style.display = 'none';
+  overlay.style.display = 'none';
+}
+
+// Eventos para fechar o popup
+closePopupButton?.addEventListener('click', closePopup);
+overlay?.addEventListener('click', closePopup);
+
+// Exemplo de uso do popup
+document.querySelectorAll('.carrossel-item').forEach((item, index) => {
+  item.addEventListener('click', () => {
+    openPopup({
+      title: `Item ${index + 1}`,
+      description: `Detalhes do item ${index + 1}.`
     });
+  });
+});
 
-    popupOverlayComida.addEventListener('click', () => {
-      popupComida.style.display = 'none';
-      popupOverlayComida.style.display = 'none';
-    });
+/* ---------------------------------------- */
+/* Ajuste Automático do Carrossel           */
+/* ---------------------------------------- */
+window.addEventListener('resize', () => {
+  const carrossel = document.querySelector('.carrossel');
+  const items = document.querySelectorAll('.carrossel-item');
+  const itemWidth = items[0]?.offsetWidth + 20 || 0; // largura do item + margem
+  const currentIndex = Math.round(
+    Math.abs(parseFloat(getComputedStyle(carrossel).transform.split(',')[4]) / itemWidth)
+  );
 
-    popupComida.addEventListener('click', (event) => {
-      event.stopPropagation();
-    });
-  }
+  // Reajusta a posição do carrossel após o resize
+  carrossel.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
 });

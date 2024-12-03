@@ -31,7 +31,7 @@
                             <a class="nav-link active highlight" href="./Home.html">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./Padarias.html">PADARIA</a>
+                            <a class="nav-link" href="./Padarias.html">PADARIAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./Combos.html">COMBOS</a>
@@ -59,28 +59,17 @@
             <article class="elemento-pedido">
                 <img src="../images/Padarias/alva.png" alt="Alva Padaria logo">
                 <div class="pedido-info">
-                    <h3 class="pedido-data">July 14th 2024</h3>
-                    <p class="padaria-nome">Alva Padaria</p>
-                    <p class="pedido-descricao">1x Egg sandwich Combo</p>
+                    <h3 class="pedido-data">July 14th 2024</h3> <!-- pegar a dataCompra da tabela Compra -->
+                    <p class="padaria-nome">Alva Padaria</p> <!-- e o nome da padaria da tabela Compra, que acho que nao tem ainda essa coluna na tabela né -->
+                    <p class="pedido-descricao">1x Egg sandwich Combo</p> <!-- pegar o nome do produto e a quantidade atravez da tabela ProdutoCompra -->
+                    <p class="pedido-descricao">R$ 15,00</p> <!-- e o valor total da compra -->
                 </div>
                 <div class="buttons">
-                    <a href="" class="order-details">Order details</a>
                     <a href="" class="add-cart">Add to Cart</a>
                 </div>
             </article>
 
-            <article class="elemento-pedido">
-                <img src="../images/Padarias/alva.png" alt="Alva Padaria logo">
-                <div class="pedido-info">
-                    <h3 class="pedido-data">July 14th 2024</h3>
-                    <p class="padaria-nome">Alva Padaria</p>
-                    <p class="pedido-descricao">1x Egg sandwich Combo</p>
-                </div>
-                <div class="buttons">
-                    <a href="" class="order-details">Order details</a>
-                    <a href="" class="add-cart">Add to Cart</a>
-                </div>
-            </article>
+            <!-- eu acho que pelo back tem como mostrar todos os pedidos que tem sem precisar repetir no html né -->
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

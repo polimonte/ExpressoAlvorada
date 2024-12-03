@@ -4,12 +4,12 @@ CREATE TABLE Usuario (
     nomeCompleto VARCHAR(255) NOT NULL,
     cpf VARCHAR(14) UNIQUE NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    rua VARCHAR(100) NOT NULL,
-    numero VARCHAR(10) NOT NULL,
-    complemento VARCHAR(50) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
-    estado CHAR(2) NOT NULL,
-    cep VARCHAR(8) NOT NULL
+    rua VARCHAR(100),
+    numero VARCHAR(10),
+    complemento VARCHAR(50),
+    cidade VARCHAR(100),
+    estado CHAR(2),
+    cep VARCHAR(8)
 );
 
 -- Criando tabela Padaria
@@ -17,12 +17,12 @@ CREATE TABLE Padaria (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     cnpf VARCHAR(18) UNIQUE NOT NULL,
-    rua VARCHAR(100) NOT NULL,
-    numero VARCHAR(10) NOT NULL,
-    complemento VARCHAR(50) NOT NULL,
-    cidade VARCHAR(100) NOT NULL,
-    estado CHAR(2) NOT NULL,
-    cep VARCHAR(8) NOT NULL
+    rua VARCHAR(100),
+    numero VARCHAR(10),
+    complemento VARCHAR(50),
+    cidade VARCHAR(100),
+    estado CHAR(2),
+    cep VARCHAR(8)
 );
 
 -- Criando tabela Produto
@@ -30,7 +30,7 @@ CREATE TABLE Produto (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     preco DECIMAL(10,2) NOT NULL,
-    categoria VARCHAR(50)
+    categoria VARCHAR(50) NOT NULL
 );
 
 -- Criando tabela Pedido
@@ -83,3 +83,33 @@ CREATE TABLE PadariaProduto (
     FOREIGN KEY (padaria_id) REFERENCES Padaria(id),
     FOREIGN KEY (produto_id) REFERENCES Produto(id)
 );
+
+-- Criando tabela Método de Pagamento
+CREATE TABLE MetodoPagamento (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    tipo VARCHAR(50) NOT NULL,
+    usuario_id BIGINT NOT NULL,
+    numeroCartao VARCHAR(19),
+    dataValidade DATE,
+    cvc VARCHAR(4),
+    FOREIGN KEY (usuario_id) REFERENCES Usuario(id)
+);
+
+-- Atualizando a tabela Usuario para incluir o campo referência ao Método de Pagamento
+ALTER TABLE Usuario ADD COLUMN idMetodoPagamento BIGINT;
+ALTER TABLE Usuario ADD CONSTRAINT fk_usuario_metodopagamento 
+    FOREIGN KEY (idMetodoPagamento) REFERENCES MetodoPagamento(id);
+
+-- Adicionando restrição CHECK para validar o tipo de pagamento
+ALTER TABLE MetodoPagamento
+ADD CONSTRAINT chk_tipo_pagamento
+CHECK (tipo IN ('Pix', 'Débito', 'Crédito'));
+
+-- Adicionando coluna de imagem na tabela Produto
+ALTER TABLE Produto ADD COLUMN imagem VARCHAR(255);
+
+-- Adicionando coluna de imagem na tabela Padaria
+ALTER TABLE Padaria ADD COLUMN logo VARCHAR(255);
+
+-- Adicionando coluna padaria_id na tabela Compra
+ALTER TABLE Compra ADD COLUMN padaria_id BIGINT;

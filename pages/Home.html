@@ -31,7 +31,7 @@
                             <a class="nav-link active highlight" href="./Home.html">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./Padarias.html">PADARIA</a>
+                            <a class="nav-link" href="./Padarias.html">PADARIAS</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./Combos.html">COMBOS</a>
@@ -70,34 +70,75 @@
                 <p>Mais informações sobre a comida selecionada.</p>
                 <button onclick="closeComidaPopup()">Fechar</button>
             </div>
+        </section>
+
+        <section>
             <header class="section-title">
                 <h2>Best Sellers</h2>
             </header>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <article class="carousel-item exemplo-comida">
-                        <img src="../images/Home/bisnaguinha-leite.png" alt="Bisnaguinha de Leite">
-                        <h3>Bisnaguinha de Leite</h3>
-                        <p>R$ 4,90/uni</p>
-                    </article>
-                    <article class="carousel-item">
-                        <img src="../images/Home/croissant.png" alt="Croissant">
-                        <h3>Croissant</h3>
-                        <p>R$ 18,90/uni</p>
-                    </article>
-                    <article class="carousel-item">
-                        <img src="../images/Home/misto-quente.png" alt="Misto Quente">
-                        <h3>Misto Quente</h3>
-                        <p>R$ 5,90/uni</p>
-                    </article>
-                    <article class="carousel-item">
-                        <img src="../images/Home/tapioca-frango.png" alt="Tapioca de Frango">
-                        <h3>Tapioca de Frango</h3>
-                        <p>R$ 11,90/uni</p>
-                    </article>
+            <div id="customCarousel" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-4">
+                                <article class="carrossel-item">
+                                    <img src="../images/Home/bisnaguinha-leite.png" alt="Bisnaguinha de Leite">
+                                    <h3>Bisnaguinha de Leite</h3>
+                                    <p>R$ 4,90/uni</p>
+                                </article>
+                            </div>
+                            <div class="col-4">
+                                <article class="carrossel-item">
+                                    <img src="../images/Home/croissant.png" alt="Croissant">
+                                    <h3>Croissant</h3>
+                                    <p>R$ 18,90/uni</p>
+                                </article>
+                            </div>
+                            <div class="col-4">
+                                <article class="carrossel-item">
+                                    <img src="../images/Home/misto-quente.png" alt="Misto Quente">
+                                    <h3>Misto Quente</h3>
+                                    <p>R$ 5,90/uni</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-4">
+                                <article class="carrossel-item">
+                                    <img src="../images/Home/tapioca-frango.png" alt="Tapioca de Frango">
+                                    <h3>Tapioca de Frango</h3>
+                                    <p>R$ 11,90/uni</p>
+                                </article>
+                            </div>
+                            <div class="col-4">
+                                <article class="carrossel-item">
+                                    <img src="../images/Home/café-da-manhã.png" alt="Café da Manhã">
+                                    <h3>Café da Manhã</h3>
+                                    <p>R$ 15,90/uni</p>
+                                </article>
+                            </div>
+                            <div class="col-4">
+                                <article class="carrossel-item">
+                                    <img src="../images/Home/misto-quente.png" alt="Misto Quente">
+                                    <h3>Misto Quente</h3>
+                                    <p>R$ 5,90/uni</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button class="carousel-button prev" aria-label="Previous">❮</button>
-                <button class="carousel-button next" aria-label="Next">❯</button>
+
+                <!-- Botões de controle -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </section>
 
@@ -105,31 +146,31 @@
             <header class="section-title">
                 <h2>Savory Pastries</h2>
             </header>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <article class="carousel-item">
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <article class="carrossel-item">
                         <img src="../images/Home/bisnaguinha-leite.png" alt="Bisnaguinha de Leite">
                         <h3>Bisnaguinha de Leite</h3>
                         <p>R$ 4,90/uni</p>
                     </article>
-                    <article class="carousel-item">
+                    <article class="carrossel-item">
                         <img src="../images/Home/croissant.png" alt="Croissant">
                         <h3>Croissant</h3>
                         <p>R$ 18,90/uni</p>
                     </article>
-                    <article class="carousel-item">
+                    <article class="carrossel-item">
                         <img src="../images/Home/misto-quente.png" alt="Misto Quente">
                         <h3>Misto Quente</h3>
                         <p>R$ 5,90/uni</p>
                     </article>
-                    <article class="carousel-item">
+                    <article class="carrossel-item">
                         <img src="../images/Home/tapioca-frango.png" alt="Tapioca de Frango">
                         <h3>Tapioca de Frango</h3>
                         <p>R$ 11,90/uni</p>
                     </article>
                 </div>
-                <button class="carousel-button prev" aria-label="Previous">❮</button>
-                <button class="carousel-button next" aria-label="Next">❯</button>
+                <button class="carrossel-button prev" aria-label="Previous">❮</button>
+                <button class="carrossel-button next" aria-label="Next">❯</button>
             </div>
         </section>
 
@@ -137,31 +178,31 @@
             <header class="section-title">
                 <h2>Drinks</h2>
             </header>
-            <div class="carousel-container">
-                <div class="carousel">
-                    <article class="carousel-item">
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <article class="carrossel-item">
                         <img src="../images/Home/bisnaguinha-leite.png" alt="Bisnaguinha de Leite">
                         <h3>Bisnaguinha de Leite</h3>
                         <p>R$ 4,90/uni</p>
                     </article>
-                    <article class="carousel-item">
+                    <article class="carrossel-item">
                         <img src="../images/Home/croissant.png" alt="Croissant">
                         <h3>Croissant</h3>
                         <p>R$ 18,90/uni</p>
                     </article>
-                    <article class="carousel-item">
+                    <article class="carrossel-item">
                         <img src="../images/Home/misto-quente.png" alt="Misto Quente">
                         <h3>Misto Quente</h3>
                         <p>R$ 5,90/uni</p>
                     </article>
-                    <article class="carousel-item">
+                    <article class="carrossel-item">
                         <img src="../images/Home/café-da-manhã.png" alt="Tapioca de Frango">
                         <h3>Tapioca de Frango</h3>
                         <p>R$ 11,90/uni</p>
                     </article>
                 </div>
-                <button class="carousel-button prev" aria-label="Previous">❮</button>
-                <button class="carousel-button next" aria-label="Next">❯</button>
+                <button class="carrossel-button prev" aria-label="Previous">❮</button>
+                <button class="carrossel-button next" aria-label="Next">❯</button>
             </div>
         </section>
     </main>

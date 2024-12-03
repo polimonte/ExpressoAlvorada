@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 30px;
+    justify-content: flex-start;
+    padding: 20px;
+    margin: 60px 100px;
+    /* 60px superior/inferior, 100px laterais */
+  }
+  
+  .elemento-produto {
+    display: grid;
+    grid-template-columns: 160px auto;
+    grid-template-rows: auto 1fr;
+    background-color: #F3E3CF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .elemento-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .elemento-produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .produto-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 16px;
+  }
+  
+  .produto-info h3 {
+    margin: 0;
+    font-size: 1.12rem;
+    font-family: 'Playfair Display', serif;
+    color: #6F4E37;
+  }
+  
+  .produto-info .preço {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #6F4E37;
+  }
+  
+  .botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+  }
+  
+  .botao-cart {
+    align-self: center;
+    padding: 6px 30px;
+    background-color: #6F4E37;
+    color: #F3E3CF;
+    text-decoration: none;
+    border-radius: 0px 0px 8px 8px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .botao-cart:hover {
+    background-color: #8B5E40;
+  }
+  
+  .botao-detalhes {
+    align-self: center;
+    padding: 6px 43.6px;
+    background-color: #F3E3CF;
+    color: #6F4E37;
+    text-decoration: none;
+    border: solid 1px #6F4E37;
+    border-radius: 8px 8px 0px 0px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .botao-detalhes:hover {
+    background-color: #6F4E37;
+    color: #F3E3CF;
+  }
