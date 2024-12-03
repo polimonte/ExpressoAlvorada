@@ -74,6 +74,8 @@ body {
 
 /* Destaque no menu */
 .menu .highlight a {
+    width: 85px;
+    text-align: center;
     color: #F8F0E6 !important;
     background-color: #3b2c25 !important;
     /* border-radius: 20px; */
@@ -94,8 +96,8 @@ body {
 }
 
 .icons .icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     background-size: cover;
     margin: 0 5px;
     cursor: pointer;

@@ -1,398 +1,10 @@
-/* .destaque {
-  display: grid;
-  grid-template-columns: 800px max-content;
-  background-color: #F3E3CF;
-  margin: 0;
-  justify-content: space-between;
-}
-
-.texto-destaque {
-  align-items: center;
-  padding-top: 100px;
-  padding-left: 80px;
-}
-
-.texto-destaque h1 {
-  font-family: 'Playfair Display', serif;
-}
-
-.texto-destaque p {
-  font-family: 'Playfair Display SC', serif;
-}
-
-.destaque img {
-  width: max-content;
-  height: max-content;
-
-}
-
-.section-title {
-  position: relative;
-  width: 80%;
-  margin: auto;
-
-}
-/* 
-.carrossel-container {
-  position: relative;
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.carrossel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  gap: 15px;
-}
-
-.carrossel img {
-  width: 212px;
-  height: 163px;
-  max-width: 212px;
-
-}
-
-.carrossel-item {
-  flex: 0 0 33.33%;
-   Exibe 3 itens por vez 
-  text-align: center;
-  background-color: #F3E3CF;
-  padding: 20px;
-  width: max-content;
-  border-radius: 20px;
-
-
-}
-
-.carrossel-item:hover {
-  border: 2px solid black;
-  border-radius: 20px;
-}
-
-.carrossel-item h3,
-p {
-  width: max-content;
-  justify-self: center;
-}
-
-.carrossel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.carrossel-button.prev {
-  left: 10px;
-}
-
-.carrossel-button.next {
-  right: 10px;
-} */
-/* 
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-}
-
-.popup h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.carousel-inner .row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.carousel-inner .col-4 {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.carousel-item {
-  display: flex;
-  justify-content: center;
-}
-
-.carrossel-item {
-  text-align: center;
-  background-color: #f3e3cf;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.carrossel-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.carrossel-item:hover {
-  transform: scale(1.05); /* Pequeno efeito ao passar o mouse 
-  border: 2px solid #000;
-}
-*
-.carousel-control-prev,
-.carousel-control-next {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1); /* Deixa os ícones brancos 
-}
-
-/* Responsividade 
-@media (max-width: 992px) {
-  .col-4 {
-    flex: 0 0 50%; /* 2 itens visíveis em telas médias 
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .col-4 {
-    flex: 0 0 100%; /* 1 item visível em telas pequenas 
-    max-width: 100%;
-  }
-}
- 
-
-.popup-comida {
-  display: none;
-  /* Inicialmente invisível 
-  position: fixed;
-  z-index: 1000;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  max-width: 90%;
-}
-
-/* Estilo da sobreposição específica para esse pop-up 
-.popup-overlay-comida {
-  display: none;
-  /* Inicialmente invisível 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
-
-
-/* ------------------------------------ */
-/* Ajusta o container principal *
-.carrossel-container {
-  position: relative;
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
-
-/* Estilo dos itens do carrossel *
-.carrossel-item {
-  text-align: center;
-  background-color: #F3E3CF;
-  padding: 20px;
-  border-radius: 20px;
-}
-
-.carrossel-item {
-  flex: 0 0 auto; /* Garante que cada item fique no seu lugar 
-  margin-right: 15px; /* Espaço entre os itens 
-}
-.carousel-inner .row {
-  flex-wrap: nowrap; /* Impede que os itens "quebrem" para a próxima linha 
-}
-
-.row {
-  gap: 20px;
-}
-
-.carrossel img {
-  width: 212px;
-  height: 163px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.carrossel-item h3,
-.carrossel-item p {
-  margin-top: 10px;
-}
-
-.carrossel-item:hover {
-  border: 2px solid black;
-  border-radius: 20px;
-}
-
-/* Botões de navegação 
-.carrossel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.carrossel-button.prev {
-  left: 10px;
-}
-
-.carrossel-button.next {
-  right: 10px;
-}
-
-.carousel-inner .row {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.carousel-inner .col-4 {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-.carousel-item {
-  display: flex;
-  justify-content: center;
-}
-
-.carrossel-item {
-  text-align: center;
-  background-color: #f3e3cf;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.carrossel-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.carrossel-item:hover {
-  transform: scale(1.05); /* Pequeno efeito ao passar o mouse 
-  border: 2px solid #000;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1); /* Deixa os ícones brancos 
-}
-
-/* Responsividade 
-@media (max-width: 992px) {
-  .col-4 {
-    flex: 0 0 50%; /* 2 itens visíveis em telas médias 
-    max-width: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .col-4 {
-    flex: 0 0 100%; /* 1 item visível em telas pequenas 
-    max-width: 100%;
-  }
-} */ 
-
-/* ---------------------------------------- */
-/* Reset e Estilos Globais                  */
-/* ---------------------------------------- */
-/* body, h1, h2, h3, p, ul, ol {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #F3E3CF;
-} */
-
-/* ---------------------------------------- */
-/* Estilo do Header                         */
-/* ---------------------------------------- */
-/* header {
-  background-color: #fff;
-  border-bottom: 1px solid #ccc;
-}
-
-.navbar {
-  padding: 15px;
-}
-
-.navbar .logo img {
-  width: 100px;
-}
-
-.navbar .menu .nav-link {
-  color: #000;
-  font-weight: bold;
-  padding: 10px;
-}
-
-.navbar .menu .highlight {
-  text-decoration: underline;
-}
-
-.navbar .auth-section {
-  display: flex;
-  align-items: center;
-}
-
-.auth-section .icon {
-  margin-left: 15px;
-  cursor: pointer;
-} */
 
 /* ---------------------------------------- */
 /* Estilo da Seção Destaque                 */
 /* ---------------------------------------- */
 .destaque {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   padding-left: 100px;
   background-color: #F3E3CF;
@@ -411,17 +23,17 @@ body {
 }
 
 .destaque img {
-  max-width: 581px;
-  max-height: 370px;
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  /* width: 100%; */
+  height: 100%;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 /* ---------------------------------------- */
 /* Carrossel                                */
 /* ---------------------------------------- */
-.carrossel-container {
+.carrossel-container, .carousel {
   position: relative;
   width: 80%;
   margin: auto;
@@ -434,18 +46,20 @@ body {
   transition: transform 5s ease-in-out;
 }
 .carousel {
-  height: 500px; /* Ajuste para o valor desejado */
+  max-width: 1200px;
 }
 
 
 .carrossel-item {
   flex: 0 0 calc(100% / 3 - 20px);
+  align-items: center;
   background-color: #f3e3cf;
   border-radius: 10px;
   text-align: center;
   max-width: 246px;
   transition: transform 0.3s ease-in-out;
 }
+
 .col-4 {
   background-color: #F8F0E6; /* Substitua pelo código da cor desejada */
 }
@@ -453,15 +67,16 @@ body {
 
 .carrossel-item img {
   width: 100%;
+  margin-top: 10px;
   max-width: 216px;
   height: auto;
   border-radius: 10px;
 }
 
-.carrossel-item:hover {
+/* .carrossel-item:hover {
   transform: scale(1.05);
   border: 2px solid black;
-}
+} */
 
 .carrossel-button {
   position: absolute;
@@ -530,7 +145,7 @@ body {
 /* Botões do carrossel */
 .carousel-control-prev,
 .carousel-control-next {
-    position: absolute;
+    /* position: relative; */
     top: 50%; /* Centraliza os botões verticalmente */
     transform: translateY(-50%);
     z-index: 5; /* Garante que fiquem acima do conteúdo */

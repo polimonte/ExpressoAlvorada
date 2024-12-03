@@ -69,9 +69,8 @@
     </main>
 
     <!-- Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-        
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">   
+        <div class="modal-dialog modal-md">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -89,36 +88,11 @@
                                 <div class="forgetPassword">
                                     <a href="#" class="text-muted">Forget password</a>
                                 </div>
-                                <div class="d-flex">
+                                <div class="d-flex botoes">
                                     <button type="button" class="btn" id="loginButton">Sign In</button>
+                                    <button type="button" class="btn" id="createAccountButton">Create Account</button>
                                 </div>
-                            </form>
-                        </div>
-
-                        <!-- Linha divisória -->
-                        <div class="divider"></div>
-
-                        <!-- Formulário de Cadastro -->
-                        <div class="register-section">
-                            <h3>Sign Up</h3>
-                            <form id="registerForm">
-                                <div class="col-sm">
-                                    <input type="text" placeholder="Full Name" class="form-control" id="fullName" required>
-                                </div>
-                                <div class="col-sm">
-                                    <input type="email" placeholder="Email" class="form-control" id="registerEmail" required>
-                                </div>
-                                <div class="col-sm">
-                                    <input type="text" placeholder="CPF" class="form-control" id="cpf" required>
-                                </div>
-                                <div class="col-sm">
-                                    <input type="password" placeholder="Password" class="form-control" id="registerPassword" required>
-                                </div>
-                                <div class="col-sm">
-                                    <input type="password" placeholder="Confirm Password" class="form-control" id="confirmPassword" required>
-                                </div>
-
-                                <button type="button" class="btn btn-success" id="registerButton">Register</button>
+                                
                             </form>
                         </div>
                     </div>
