@@ -115,6 +115,10 @@ body {
     background-image: url('../images/complementos/carrinho.png');
 }
 
+.icons .logout-icon {
+    background-image: url('../images/complementos/icon-sign-out.svg');
+}
+
 .auth-section {
     display: flex;
     align-items: center;

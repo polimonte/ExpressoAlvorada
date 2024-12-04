@@ -30,7 +30,8 @@ CREATE TABLE Produto (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(255) NOT NULL,
     preco DECIMAL(10,2) NOT NULL,
-    categoria VARCHAR(50) NOT NULL
+    categoria VARCHAR(50) NOT NULL,
+    descricao VARCHAR(255) NOT NULL
 );
 
 -- Criando tabela Pedido
