@@ -5,10 +5,23 @@ main{
 }
 
 .caminhos{
-  margin-left: 80px;
+  display: flex;
+  background-color: #6F4E37;
+  color: #F3E3CF;
+  width: 25vw;
+  margin-left: 0px;
   margin-top: 10px;
-  font-family: 'Playfair Display SC';
-  font-size: 1.1rem;
+  font-family: 'Playfair Display';
+  font-size: 1.3rem;
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px; 
+}
+
+.breadcrumb-item a{
+  text-align: center;
+  align-self: center;
+  color: #ffffff;
+  margin-left: 20px;
 }
 
 .grid-produtos {
