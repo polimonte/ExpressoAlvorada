@@ -1,0 +1,59 @@
+main {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+}
+
+.form-container {
+  background-color: #fff;
+  border: 2px solid #F28C28;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  justify-self: center;
+}
+
+.form-container h2 {
+  color: #F28C28;
+  margin-bottom: 20px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #F28C28;
+  border-radius: 25px;
+  outline: none;
+}
+
+.form-container input:focus {
+  border-color: #F28C28;
+}
+
+.form-container button {
+  background-color: #F28C28;
+  color: #3b2c25;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.form-container button:hover {
+  background-color: #F28C28;
+}
+
+.form-container p {
+  font-size: 0.9rem;
+  /* color: #333; */
+  text-align: left;
+}
+
+.form-container p span {
+  color: red;
+}

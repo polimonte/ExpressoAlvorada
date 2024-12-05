@@ -1,8 +1,74 @@
-.container-carrinho{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    width: 80%;
+.carrinho {
+    width: 79vw;
     justify-self: center;
-    background-color: #FFFFFF;
-    margin-top: 50px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.container-carrinho {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto 0 auto;
+    background-color: #F3E3CF;
+    border-radius: 8px;
+    min-height: 800px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.card {
+    max-height: 300px; /* Diminui a altura máxima do card */
+    width: 80px; /* Ajusta a largura dos cards */
+    margin: 10px auto; /* Adiciona espaçamento entre os cards */
+    padding: 10px; /* Reduz o preenchimento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas levemente arredondadas */
+}
+
+.card-img-top {
+    max-height: 150px; /* Limita a altura da imagem */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
+}
+
+.card-body {
+    padding: 10px; /* Reduz o espaço interno do conteúdo */
+    text-align: center; /* Centraliza o texto */
+}
+
+
+.remove-item {
+    background-color: #F3E3CF;
+    border: solid 1px #6F4E37;
+    color: #614436;
+}
+
+.remove-item:hover {
+    background-color: #3b2c25;
+    border: solid 1px #3b2c25;
+    color: #F3E3CF;
+}
+
+.container-forms {
+    width: 80%;
+    margin: 20px auto;
+    border-radius: 8px;
+    background-color: #F3E3CF;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+    padding: 0;
+    width: 40%;
+}
+
+#purchase {
+    background-color: #F3E3CF;
+    border: solid 1px #6F4E37;
+    color: #6F4E37;
+}
+
+#purchase:hover{
+    background-color: #6F4E37;
+    color: #F3E3CF;
 }

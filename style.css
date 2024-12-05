@@ -8,23 +8,19 @@
   align-content: center;
 }
 
-.login-section,
-.register-section {
+.login-section {
   width: 100%;
   display: grid;
   justify-content: center;
   text-align: center;
 }
 
-.login-section,
-.register-section h3 {
+.login-section h3 {
   color: #F28C28;
   justify-content: center;
 }
 
-.login-section input,
-.register-section input,
-.register-section select {
+.login-section input {
   border-radius: 60px;
   border: solid 1px #F28C28;
   width: 20vw;

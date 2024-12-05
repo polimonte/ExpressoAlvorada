@@ -8,9 +8,9 @@
   }
   
   .profile-header {
-    background-color: #6F4E37;
-    color: #F3E3CF;
-    text-align: center;
+    background-color: #F3E3CF;
+    color: #6F4E37;
+    /* text-align: center; */
     padding: 20px;
     border-radius: 10px 10px 0 0;
   }
@@ -70,3 +70,7 @@
     background-color: #8B5E40;
     transform: translateY(-2px);
   }
+
+.accordion-button{
+  background-color: #F3E3CF;
+}
