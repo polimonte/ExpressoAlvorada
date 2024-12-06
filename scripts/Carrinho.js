@@ -40,3 +40,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Aqui você pode adicionar lógica para salvar o endereço
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Seleciona o botão "Go to Home Page"
+  const goToHomePageButton = document.getElementById('goToHomePage');
+
+  if (goToHomePageButton) {
+    goToHomePageButton.addEventListener('click', function () {
+      // Zera o contador no sessionStorage
+      sessionStorage.setItem('cartCount', '0');
+
+      // Atualiza a visualização do ícone do carrinho
+      const cartBadge = document.querySelector('.cart-icon .badge');
+      if (cartBadge) {
+        cartBadge.textContent = ''; // Remove o texto do badge
+      }
+
+      // Redireciona para a página Home
+      window.location.href = './Home.html';
+    });
+  }
+});

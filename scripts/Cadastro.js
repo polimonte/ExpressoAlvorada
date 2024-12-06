@@ -1,21 +1,11 @@
-const form = document.getElementById('registrationForm');
+document.addEventListener('DOMContentLoaded', function () {
+  // Seleciona o botão dentro do modal
+  const modalButton = document.querySelector('.btn-save');
 
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  const password = form.password.value;
-  const confirmPassword = form.confirmPassword.value;
-
-  if (password !== confirmPassword) {
-    alert("Passwords do not match!");
-    return;
+  if (modalButton) {
+      modalButton.addEventListener('click', function () {
+          // Redireciona para a página index.html
+          window.location.href = '../index.html';
+      });
   }
-
-  // const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
-  // if (!passwordRegex.test(password)) {
-  //   alert("Password must meet all requirements.");
-  //   return;
-  // }
-
-  // alert("Registration successful!");
-  window.location.href = '../index.html';
 });

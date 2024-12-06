@@ -103,3 +103,9 @@
   margin: auto;
   border-radius: 15px;
 }
+
+.col-md-6 img{
+  min-width: 100%;
+  display: block;
+  min-height: fit-content;
+}

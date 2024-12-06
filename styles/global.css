@@ -170,3 +170,61 @@ body {
     background-color: #6F4E37;
     color: #FFF8EC;
 }
+
+@media (max-width: 375px) {
+
+    /* Ajustar o tamanho do body */
+    body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Ajuste do navbar */
+    .navbar {
+        padding: 5px 10px;
+    }
+
+    .navbar::before{
+        display: none;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu li {
+        margin: 0 px;
+    }
+
+    .menu a {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .menu .highlight {
+        width: 100%;
+        text-align: center;
+        margin-top: 18px;
+        margin-left: 0px;
+        padding:5px 10px;
+        
+    }
+
+    .icons .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .search-input {
+        width: 150px;
+        font-size: 12px;
+    }
+
+    .auth-button,
+    .search-button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
