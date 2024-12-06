@@ -1,0 +1,103 @@
+body {
+    background-color: #FFF8EC;
+    margin: 0;
+    padding: 0;
+}
+
+.pedidos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.elemento-pedido {
+    display: grid;
+    grid-template-columns: 180px 1fr 200px;
+    background-color: #F3E3CF;
+    border-radius: 10px;
+    padding: 20px;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 1156px;
+}
+
+.elemento-pedido:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.elemento-pedido img {
+    width: 168px;
+    height: 168px;
+    border-radius: 10px;
+}
+
+.pedido-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+.pedido-data {
+    margin: 0;
+    font-size: 18px;
+    color: #6F4E37;
+}
+
+.padaria-nome {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.pedido-descricao {
+    margin: 0;
+    color: #555;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons a {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.order-details {
+    background-color: #FFF8EC;
+    color: #6F4E37;
+    border: 1px solid #6F4E37;
+}
+
+.order-details:hover {
+    background-color: #6F4E37;
+    color: #FFF8EC;
+}
+
+.add-cart {
+    background-color: #6F4E37;
+    color: #F3E3CF;
+}
+
+.add-cart:hover {
+    background-color: #8B5E40;
+    color: #FFF8EC;
+}
